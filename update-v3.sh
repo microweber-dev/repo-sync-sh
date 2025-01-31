@@ -5,6 +5,8 @@ if [ ! -d "$PROJECT_DIR" ]; then
     exit 1
 fi
 
+wget https://raw.githubusercontent.com/microweber-dev/repo-sync-sh/refs/heads/main/branding_saas.json -O $PROJECT_DIR/storage/branding.json
+
 WORKDIR="microweber-updater"
 if [ ! -d "$WORKDIR" ]; then
     mkdir $WORKDIR
