@@ -13,6 +13,20 @@ WORKDIR_REL_PATH=$(pwd)/$WORKDIR
 
 cd $WORKDIR
 
+## CLONE THE MICROWEBER REPOSITORY
+
+# Check if the folder exists
+if [ ! -d "microweber" ]; then
+    # Clone the repository
+    git clone https://github.com/microweber/microweber.git
+fi
+
+# Enter the folder
+cd microweber
+git checkout filament
+git pull origin filament
+
+
 
 #### CLONE THE TEMPLATES
 SSH_KEYS_REL_PATH=$WORKDIR_REL_PATH/.SSH_KEYS
@@ -41,21 +55,7 @@ fi
 
 git pull
 
-rsync -a --quiet $WORKDIR_REL_PATH/microweber/Templates/ $PROJECT_DIR/Templates/
-
-
-## CLONE THE MICROWEBER REPOSITORY
-
-# Check if the folder exists
-if [ ! -d "microweber" ]; then
-    # Clone the repository
-    git clone https://github.com/microweber/microweber.git
-fi
-
-# Enter the folder
-cd microweber
-git checkout filament
-git pull origin filament
+cd $WORKDIR_REL_PATH/microweber
 
 ## Install npm dependencies
 npm install
