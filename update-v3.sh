@@ -55,6 +55,8 @@ if [ ! -d "Big2" ]; then
     git clone git@github.com:microweber-templates/big2.git Big2
 fi
 
+cd $WORKDIR_REL_PATH/microweber/Templates/Big2
+
 git pull
 
 cd $WORKDIR_REL_PATH/microweber
