@@ -1,0 +1,21 @@
+{
+  "brand_name": "MyWeby",
+  "brand_favicon": "https://raw.githubusercontent.com/microweber-dev/repo-sync-sh/refs/heads/main/MyWeby.svg",
+  "admin_logo_login_link": null,
+  "enable_support_links": false,
+  "custom_support_url": null,
+  "powered_by_text": "MyWeby",
+  "powered_by_link": false,
+  "enable_service_links": false,
+  "logo_admin": "https://raw.githubusercontent.com/microweber-dev/repo-sync-sh/refs/heads/main/MyWeby.svg",
+  "logo_live_edit": "https://raw.githubusercontent.com/microweber-dev/repo-sync-sh/refs/heads/main/MyWeby.svg",
+  "logo_login": "https://raw.githubusercontent.com/microweber-dev/repo-sync-sh/refs/heads/main/MyWeby.svg",
+  "marketplace_repositories_urls": "https://market.microweberapi.com/packages/myweby/packages.json",
+  "disable_marketplace": true,
+  "disable_powered_by_link": true,
+  "external_login_server_button_text": null,
+  "external_login_server_enable": false,
+  "enable_microweber_service_links": false,
+  "admin_colors_sass": null,
+  "website_manager_url": "https:\/\/myweby.com"
+}
