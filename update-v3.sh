@@ -93,7 +93,7 @@ rsync -a --quiet $WORKDIR_REL_PATH/microweber/src/ $PROJECT_DIR/src/
 rm -rf $PROJECT_DIR/packages
 rsync -a --quiet $WORKDIR_REL_PATH/microweber/packages/ $PROJECT_DIR/packages/
 
-rm -rf $PROJECT_DIR/database
+#rm -rf $PROJECT_DIR/database
 rsync -a --quiet $WORKDIR_REL_PATH/microweber/database/ $PROJECT_DIR/database/
 
 rm -rf $PROJECT_DIR/app
