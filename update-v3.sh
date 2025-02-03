@@ -77,15 +77,35 @@ npm run build
 ## Install the dependencies
 composer install --ignore-platform-req=ext-sodium
 #
+
+rm -rf $PROJECT_DIR/Modules
 rsync -a --quiet $WORKDIR_REL_PATH/microweber/Modules/ $PROJECT_DIR/Modules/
+
+rm -rf $PROJECT_DIR/Templates
 rsync -a --quiet $WORKDIR_REL_PATH/microweber/Templates/ $PROJECT_DIR/Templates/
+
+rm -rf $PROJECT_DIR/vendor
 rsync -a --quiet $WORKDIR_REL_PATH/microweber/vendor/ $PROJECT_DIR/vendor/
+
+rm -rf $PROJECT_DIR/src
 rsync -a --quiet $WORKDIR_REL_PATH/microweber/src/ $PROJECT_DIR/src/
+
+rm -rf $PROJECT_DIR/packages
 rsync -a --quiet $WORKDIR_REL_PATH/microweber/packages/ $PROJECT_DIR/packages/
+
+rm -rf $PROJECT_DIR/database
 rsync -a --quiet $WORKDIR_REL_PATH/microweber/database/ $PROJECT_DIR/database/
+
+rm -rf $PROJECT_DIR/app
 rsync -a --quiet $WORKDIR_REL_PATH/microweber/app/ $PROJECT_DIR/app/
+
+rm -rf $PROJECT_DIR/bootstrap
 rsync -a --quiet $WORKDIR_REL_PATH/microweber/bootstrap/ $PROJECT_DIR/bootstrap/
+
+rm -rf $PROJECT_DIR/resources
 rsync -a --quiet $WORKDIR_REL_PATH/microweber/resources/ $PROJECT_DIR/resources/
+
+rm -rf $PROJECT_DIR/public
 rsync -a --quiet $WORKDIR_REL_PATH/microweber/public/ $PROJECT_DIR/public/
 
 
