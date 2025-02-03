@@ -5,6 +5,13 @@ if [ ! -d "$PROJECT_DIR" ]; then
     exit 1
 fi
 
+#SELF_DIR=$(dirname "$0")
+#
+#chmod 777 $SELF_DIR/update-interface.php
+#rm -rf $PROJECT_DIR/public/update.php
+#ln -s $SELF_DIR/update-interface.php $PROJECT_DIR/public/update.php
+
+
 wget https://raw.githubusercontent.com/microweber-dev/repo-sync-sh/refs/heads/main/branding_saas.json -O $PROJECT_DIR/storage/branding.json
 
 WORKDIR="microweber-updater"
