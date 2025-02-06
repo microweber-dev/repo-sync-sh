@@ -58,6 +58,9 @@ echo "Host github.com
 
 
 cd $WORKDIR_REL_PATH/microweber/Templates
+
+
+## CLONE BIG
 if [ ! -d "Big2" ]; then
     git clone git@github.com:microweber-templates/big2.git Big2
 fi
@@ -65,6 +68,16 @@ fi
 cd $WORKDIR_REL_PATH/microweber/Templates/Big2
 
 git pull
+
+## CLONE TAILWIND
+if [ ! -d "Tailwind" ]; then
+    git clone git@github.com:microweber-templates/Tailwind.git Tailwind
+fi
+
+cd $WORKDIR_REL_PATH/microweber/Templates/Tailwind
+
+git pull
+
 
 cd $WORKDIR_REL_PATH/microweber
 
