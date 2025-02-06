@@ -56,28 +56,22 @@ ssh-add $SSH_KEYS_REL_PATH/id_rsa
 echo "Host github.com
   IdentityFile $SSH_KEYS_REL_PATH/id_rsa" > $SSH_KEYS_REL_PATH/config
 
-
-cd $WORKDIR_REL_PATH/microweber/Templates
-
-
 ## CLONE BIG
+cd $WORKDIR_REL_PATH/microweber/Templates
 if [ ! -d "Big2" ]; then
     git clone git@github.com:microweber-templates/big2.git Big2
 fi
 
-cd $WORKDIR_REL_PATH/microweber/Templates/Big2
-
 git pull
 
+
 ## CLONE TAILWIND
+cd $WORKDIR_REL_PATH/microweber/Templates
 if [ ! -d "Tailwind" ]; then
     git clone git@github.com:microweber-templates/Tailwind.git Tailwind
 fi
-
 cd $WORKDIR_REL_PATH/microweber/Templates/Tailwind
-
 git pull
-
 
 cd $WORKDIR_REL_PATH/microweber
 
