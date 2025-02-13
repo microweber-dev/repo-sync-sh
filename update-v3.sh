@@ -1,4 +1,7 @@
-PROJECT_DIR=/home/v3microweber/public_html
+PROJECT_DIR=/home/v3microweber/code
+PROJECT_PUBLIC_DIR=/home/v3microweber/public_html
+
+ln -s $PROJECT_DIR/public $PROJECT_PUBLIC_DIR
 
 if [ ! -d "$PROJECT_DIR" ]; then
     echo "The project directory does not exist."
