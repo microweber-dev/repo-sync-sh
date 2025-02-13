@@ -32,6 +32,8 @@ fi
 
 # Enter the folder
 cd microweber
+rm -rf composer.lock
+rm -rf vendor
 git checkout filament
 git pull origin filament
 
@@ -56,6 +58,10 @@ ssh-add $SSH_KEYS_REL_PATH/id_rsa
 echo "Host github.com
   IdentityFile $SSH_KEYS_REL_PATH/id_rsa" > $SSH_KEYS_REL_PATH/config
 
+chmod 600 $SSH_KEYS_REL_PATH/id_rsa
+chmod 600 $SSH_KEYS_REL_PATH/id_rsa.pub
+chmod 600 $SSH_KEYS_REL_PATH/config
+
 ## CLONE BIG
 cd $WORKDIR_REL_PATH/microweber/Templates
 if [ ! -d "Big2" ]; then
@@ -63,7 +69,6 @@ if [ ! -d "Big2" ]; then
 fi
 
 git pull
-
 
 ## CLONE TAILWIND
 cd $WORKDIR_REL_PATH/microweber/Templates
@@ -82,7 +87,7 @@ npm install
 npm run build
 #
 ## Install the dependencies
-composer install --ignore-platform-req=ext-sodium
+composer install --ignore-platform-reqs
 #
 
 rm -rf $PROJECT_DIR/Modules
@@ -114,6 +119,15 @@ rsync -a --quiet $WORKDIR_REL_PATH/microweber/resources/ $PROJECT_DIR/resources/
 
 rm -rf $PROJECT_DIR/public
 rsync -a --quiet $WORKDIR_REL_PATH/microweber/public/ $PROJECT_DIR/public/
+
+rm -rf $PROJECT_DIR/composer.json
+rsync -a --quiet $WORKDIR_REL_PATH/microweber/composer.json $PROJECT_DIR/composer.json
+
+rm -rf $PROJECT_DIR/package.json
+rsync -a --quiet $WORKDIR_REL_PATH/microweber/package.json $PROJECT_DIR/package.json
+
+rm -rf $PROJECT_DIR/composer.lock
+rsync -a --quiet $WORKDIR_REL_PATH/microweber/composer.lock $PROJECT_DIR/composer.lock
 
 
 echo "The update is completed."
