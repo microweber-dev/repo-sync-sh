@@ -129,5 +129,6 @@ rsync -a --quiet $WORKDIR_REL_PATH/microweber/package.json $PROJECT_DIR/package.
 rm -rf $PROJECT_DIR/composer.lock
 rsync -a --quiet $WORKDIR_REL_PATH/microweber/composer.lock $PROJECT_DIR/composer.lock
 
+rsync -a --quiet $WORKDIR_REL_PATH/microweber/.git $PROJECT_DIR/.git
 
 echo "The update is completed."
